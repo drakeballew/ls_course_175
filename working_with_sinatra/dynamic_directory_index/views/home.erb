@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <ul>
+      <% @files.each do |file| %>
+      <li><a href="<%= file %>" target="_blank"><%= file %></a></li>    
+      <% end %>
+    </ul>
+    <p>
+      <% if @reverse %>
+        <a href="/">Sort Ascending</a>
+      <% else %>
+        <a href="/?reverse=true">Sort Descending</a>
+      <% end %>
+    </p>
+  </body>
+</html>
